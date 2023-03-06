@@ -1,0 +1,709 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../imagenes/fondo-pantalla.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/*header*/
+header{
+    background-image: url(../imagenes/fondoazul.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    gap: 15px;
+}
+
+.img-container{
+    text-align: center;
+}
+.img-container img{
+    border-radius: 20px;
+    border: solid 7px #fff;
+    width: 300px;
+}
+
+.titulo-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.content-titulo{
+    text-align: center;
+}
+.content-titulo h1{
+    font-size: 70px;
+    font-family: 'Montserrat', sans-serif;
+    color: #0025d9;
+    margin: 0;
+    text-shadow: 0px -1px 10px #ffffff;
+}
+.content-titulo span{
+    color: #fff;
+    text-shadow: 0px -1px 10px #0025d9;
+}
+.content-titulo p{
+    color: #fff;
+    font-size: 30px;
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+}
+
+.enlaces-contacto{
+    text-align: center;
+    margin: 10px;
+}
+.enlaces-contacto button{
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50%;
+    border: solid 7px;
+    padding: 10px;
+    background: #0025d9;
+}
+
+@media screen and (max-width: 420px){
+    header{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 15px;
+    }
+    .img-container{
+        margin-top: 20px;
+    }
+    .img-container img{
+        width: 150px;
+    }
+    .titulo-container{
+        margin-bottom: 20px;
+    }
+    .enlaces-contacto{
+        display: none;
+    }
+    .content-titulo h1{
+        font-size: 25px;
+    }
+    .content-titulo p{
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 420px) and (max-width: 900px){
+    header{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 15px;
+    }
+    .img-container{
+        margin-top: 20px;
+    }
+    .img-container img{
+        width: 250px;
+    }
+    .titulo-container{
+        margin-bottom: 20px;
+    }
+    .enlaces-contacto{
+        display: none;
+    }
+    .content-titulo h1{
+        font-size: 35px;
+    }
+    .content-titulo p{
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 1900px){
+    .img-container img{
+        width: 450px;
+    }
+    .content-titulo h1{
+        font-size: 125px;
+    }
+    .content-titulo p{
+        font-size: 80px;
+    }
+    .enlaces-contacto{
+        font-size: 50px;
+    }
+}
+
+/*main*/
+main{
+    color: #fff;
+    margin: 20px;
+    gap: 15px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+        "tres uno"
+        "tres dos"; 
+}
+.content{
+    grid-area: uno;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+/*informacion personal*/
+.content-info{
+    background-color: #ffffff1f;
+    padding: 5px;
+}
+.info-titulo{
+    margin: 5px;
+    border-bottom: solid 3px;
+}
+.info-titulo h2{
+    text-shadow: 0px -1px 10px #ffffff;
+    margin: 0;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+.info-lista{
+    margin: 20px;
+}
+.info-lista ul{
+    list-style: none;
+    font-family: 'Dancing Script', cursive;
+}
+.info-lista ul li{
+    border-left: solid 3px;
+    padding: 5px;
+}
+
+/*experiencias laborales*/
+.content-experiencia{
+    background-color: #ffffff1f;
+    padding: 5px;
+}
+.experiencia-titulo{
+    margin: 5px;
+    border-bottom: solid 3px;
+}
+.experiencia-titulo h2{
+    text-shadow: 0px -1px 10px #ffffff;
+    margin: 0;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.experiencias{
+    gap: 10px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.experiencias div ul{
+    animation-name: desplazar;
+    animation-duration: 3s;
+}
+@keyframes desplazar {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+
+.experiencia1 p{
+    font-size: 25px;
+    font-family: 'Dancing Script', cursive;
+}
+.experiencia1 ul{
+    list-style: none;
+    font-family: 'Dancing Script', cursive;
+}
+.experiencia1 ul li{
+    border-left: solid 3px;
+    padding: 5px;
+}
+
+.experiencias .boton{
+    text-align: center;
+}
+.experiencias button{
+    text-decoration: none;
+    border: solid 2px #fff;
+    background-color: #0025d9;
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+.experiencia2{
+    display: none;
+}
+.experiencia2 p{
+    font-size: 25px;
+    font-family: 'Dancing Script', cursive;
+}
+.experiencia2 ul{
+    list-style: none;
+    font-family: 'Dancing Script', cursive;
+}
+.experiencia2 ul li{
+    border-left: solid 3px;
+    padding: 5px;
+}
+
+/*habilidades*/
+.content-habilidades{
+    background-color: #ffffff1f;
+    padding: 5px;
+}
+.habilidades-titulo{
+    margin: 5px;
+    border-bottom: solid 3px;
+}
+.habilidades-titulo h2{
+    text-shadow: 0px -1px 10px #ffffff;
+    margin: 0;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.habilidades{
+    margin: 20px;
+}
+
+.item-habilidades p{
+    font-size: 25px;
+    font-family: 'Dancing Script', cursive;
+}
+
+/*sobre mi*/
+.info-interes{
+    background-image: url(../imagenes/fondoazul.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: tres;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sobre-mi{
+    margin: 10px;
+}
+.sobre-mi h3{
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 12px;
+    border-bottom: solid 3px;
+    text-shadow: 0px -1px 10px #ffffff;
+}
+.sobre-mi p{
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.educacion{
+    margin: 10px;
+}
+.educacion h3{
+    font-size: 30px;
+    border-bottom: solid 3px;
+    text-shadow: 0px -1px 10px #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+.educacion p{
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.lenguajes{
+    margin: 10px;
+}
+.lenguajes h3{
+    font-size: 30px;
+    border-bottom: solid 3px;
+    text-shadow: 0px -1px 10px #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+.item-lenguajes{
+    text-align: start;
+}
+.item-lenguajes p{
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.contacto{
+    margin: 10px;
+}
+.contacto h3{
+    font-size: 30px;
+    border-bottom: solid 3px;
+    text-shadow: 0px -1px 10px #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.enlaces-redes{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.enlaces-redes a{
+    padding: 20px;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.enlaces-redes a:nth-child(1){
+    color: #8040bc;
+}
+.enlaces-redes a:nth-child(2){
+    color: #00ffff;
+}
+.enlaces-redes a:nth-child(3){
+    color: #000;
+}
+.enlaces-redes a:hover{
+    background-color: #0025d9;
+}
+
+/*formulario de contacto*/
+.form-ubi{
+    background-color: #ffffff1f;
+    grid-area: dos;
+    display: block
+}
+
+.content-form{
+    margin: 20px;
+}
+.form-ubi .content-form form h3{
+    font-size: 40px;
+    border-bottom: solid 3px;
+    color: #fff;
+    text-shadow: 0px -1px 10px #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#form button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    background-color: #0025d9;
+    border: none;
+    border-radius: 4px;
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-control textarea{
+    height: 140px;
+    resize: none;
+    width: 100%;
+    padding: 9px;
+    margin: 7px 0;
+    border: none;
+    border-bottom:5px solid #fff;
+    background: #ffffff1f;
+    color: #ffffff;
+}
+
+.input-control textarea:focus{
+    background: linear-gradient(to bottom, transparent, #000);
+    outline: none;
+}
+
+.input-control label{
+    color: #000;
+}
+
+.input-control input {
+    width: 100%;
+    padding: 9px;
+    margin: 7px 0;
+    border: none;
+    border-bottom: 5px solid #fff;
+    background: #ffffff1f;
+    color: #ffffff;
+}
+
+.input-control input:focus{
+    background: linear-gradient(to bottom, transparent, #000);
+    outline: none;
+}
+
+.input-control input:focus {
+    outline: 0;
+}
+
+.input-control.success input {
+    border-color: #006d00;
+}
+
+.input-control.error input {
+    border-color: #ff0000;
+}
+
+.input-control .error {
+    color: #ff0000;
+    font-size: 9px;
+    height: 13px;
+}
+
+@media screen and (max-width: 420px){
+    main{
+        gap: 10px;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "tres" "uno" "dos"; 
+    }
+    .info-interes{
+        background-color: #ffffff1f;
+        background-image: none;
+        justify-content: start;
+    }
+    .info-titulo h2{
+        font-size: 18px;
+    }
+    .info-lista ul{
+        font-size: 10px;
+    }
+    .content-experiencia h2{
+        font-size: 18px;
+    }
+    .content-experiencia p{
+        font-size: 10px;
+    }
+    .experiencias button{
+        font-size: 10px;
+    }
+    .experiencias div ul{
+        animation: none;
+        font-size: 10px;
+    }
+    .habilidades-titulo h2{
+        font-size: 18px;
+    }
+    .item-habilidades p{
+        font-size: 10px;
+    }
+    .sobre-mi h3{
+        font-size: 18px;
+        margin: 0;
+    }
+    .sobre-mi p{
+        font-size: 10px;
+    }
+    .educacion h3{
+        font-size: 18px;
+    }
+    .educacion p{
+        font-size: 10px;
+    }
+    .lenguajes h3{
+        font-size: 18px;
+    }
+    .item-lenguajes h3{
+        font-size: 18px;
+    }
+    .item-lenguajes p{
+        font-size: 10px;
+    }
+    .contacto h3{
+        font-size: 18px;
+    }
+    .form-ubi .content-form form h3{
+        font-size: 18px; 
+    }
+}
+
+@media screen and (min-width: 420px) and (max-width: 900px){
+    main{
+        gap: 10px;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "tres" "uno" "dos"; 
+    }
+    .info-interes{
+        background-color: #ffffff1f;
+        background-image: none;
+        justify-content: start;
+    }
+    .info-titulo h2{
+        font-size: 25px;
+    }
+    .info-lista ul{
+        font-size: 15px;
+    }
+    .content-experiencia h2{
+        font-size: 25px;
+    }
+    .content-experiencia p{
+        font-size: 15px;
+    }
+    .experiencias button{
+        font-size: 15px;
+    }
+    .experiencias div ul{
+        animation: none;
+        font-size: 15px;
+    }
+    .habilidades-titulo h2{
+        font-size: 25px;
+    }
+    .item-habilidades p{
+        font-size: 15px;
+    }
+    .sobre-mi h3{
+        font-size: 25px;
+        margin: 0;
+    }
+    .sobre-mi p{
+        font-size: 15px;
+    }
+    .educacion h3{
+        font-size: 25px;
+    }
+    .educacion p{
+        font-size: 15px;
+    }
+    .lenguajes h3{
+        font-size: 15px;
+    }
+    .item-lenguajes h3{
+        font-size: 25px;
+    }
+    .item-lenguajes p{
+        font-size: 15px;
+    }
+    .contacto h3{
+        font-size: 25px;
+    }
+    .form-ubi .content-form form h3{
+        font-size: 25px; 
+    }
+}
+
+@media screen and (min-width: 1900px){
+    .info-titulo h2{
+        font-size: 70px;
+    }
+    .info-lista ul{
+        font-size: 40px;
+    }
+    .content-experiencia h2{
+        font-size: 70px;
+    }
+    .content-experiencia p{
+        font-size: 40px;
+    }
+    .experiencias button{
+        font-size: 40px;
+    }
+    .experiencias div ul{
+        font-size: 40px;
+    }
+    .habilidades-titulo h2{
+        font-size: 70px;
+    }
+    .item-habilidades p{
+        font-size: 40px;
+    }
+    .sobre-mi h3{
+        font-size: 70px;
+        margin: 0;
+    }
+    .sobre-mi p{
+        font-size: 40px;
+    }
+    .educacion h3{
+        font-size: 70px;
+    }
+    .educacion p{
+        font-size: 40px;
+    }
+    .lenguajes h3{
+        font-size: 70px;
+    }
+    .item-lenguajes h3{
+        font-size: 70px;
+    }
+    .item-lenguajes p{
+        font-size: 40px;
+    }
+    .contacto h3{
+        font-size: 70px;
+    }
+    .form-ubi .content-form form h3{
+        font-size: 70px; 
+    }
+}
+
+/*footer*/
+footer{
+    background-image: url(../imagenes/fondoazul.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    margin: 20px;
+    text-align: center;
+}
+footer h6{
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: solid 3px;
+    text-shadow: 0px -1px 10px #ffffff;
+    display: inline-block;
+}
+footer p{
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+}
+@media screen and (max-width: 420px){
+    footer h6{
+        font-size: 15px;
+    }
+    footer p{
+        font-size: 7px;
+    }
+}
+@media screen and (min-width: 420px) and (max-width: 900px){
+    footer h6{
+        font-size: 20px;
+    }
+    footer p{
+        font-size: 10px;
+    }
+}
+@media screen and (min-width: 1900px){
+    footer h6{
+        font-size: 50px;
+    }
+    footer p{
+        font-size: 30px;
+    }
+}
